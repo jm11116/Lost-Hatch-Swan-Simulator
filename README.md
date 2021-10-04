@@ -11,6 +11,7 @@ When the alarm sounds, you will have four minutes to enter the code into the mic
 
 # Todo
 - Add more sounds.
+- Add ambient sounds (e.g. computer, reactor).
 - Add number flip animations.
 
 # Screenshots
