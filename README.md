@@ -16,6 +16,7 @@ When the alarm sounds, you will have four minutes to enter the code into the mic
 - System failure SFX.
 - Pearl log print option.
 - Lockdown event.
+- Orientation video view option.
 
 # Screenshots
 <img src="https://github.com/jm11116/Lost-Hatch-Swan-Simulator/blob/main/screenshots/108.png" style="max-width:650px"/>
