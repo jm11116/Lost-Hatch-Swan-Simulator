@@ -1,0 +1,161 @@
+@font-face {
+    font-family: arial-bold;
+    src: url("assets/arial_bold.ttf");
+}
+body {
+    background-color: rgb(18, 18, 18);
+}
+#power_surge_overlay {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(18, 18, 18);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 98;
+}
+#film_grain_overlay {
+    background-image: url("assets/grain.gif");
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    opacity: 0.1;
+    z-index: 99;
+    filter: contrast(150%);
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    -webkit-box-shadow: 2px 2px 5px 6px rgba(0,0,0,0.22); 
+    box-shadow: 2px 2px 5px 6px rgba(0,0,0,0.22);
+}
+#timer_background {
+    width: 100vw;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+#lines_overlay {
+    width: 100vw;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.numbers {
+    font-family: arial-bold;
+    font-size: 10.5vw;
+    font-style: normal;
+    color: rgb(114, 249, 238);
+    position: absolute;
+    z-index: 4;
+    transform: rotate(-1.3deg);
+    filter: blur(0.2px);
+    opacity: 0.8;
+    transform: rotate(-1.1deg);
+}
+#number1 {
+    top: 10.6vw;
+    left: 31.2vw;
+    opacity: 0.7;
+}
+#number2 {
+    top: 10.2vw;
+    left: 40.8vw;
+    opacity: 0.74;
+}
+#number3 {
+    top: 9.8vw;
+    left: 50.6vw;
+    transform: rotate(-1.6deg);
+}
+#number4 {
+    color: black;
+    top: 9.3vw;
+    left: 63.1vw;
+    opacity: 0.77;
+    transform: rotate(-3deg);
+}
+#number5 {
+    color: black;
+    top: 8.85vw;
+    left: 73.1vw;
+    opacity: 0.78;
+    transform: rotate(-3deg);
+}
+
+.glyph {
+    width: 9.8vw;
+    font-family: arial-bold;
+    font-size: 10.5vw;
+    font-style: normal;
+    color: rgb(114, 249, 238);
+    position: absolute;
+    z-index: 4;
+    transform: rotate(-1.3deg);
+    filter: blur(0.2px);
+    opacity: 0.8;
+    transform: rotate(-2.7deg);
+    display: none;
+}
+#glyph1 {
+    top: 13.3vw;
+    left: 29.6vw;
+    opacity: 0.7;
+}
+#glyph2 {
+    top: 13.3vw;
+    left: 39.2vw;
+    opacity: 0.74;
+}
+#glyph3 {
+    top: 12.3vw;
+    left: 49.2vw;
+    transform: rotate(-1.6deg);
+}
+#glyph4 {
+    width: 9.2vw;
+    color: black;
+    top: 12vw;
+    left: 62.05vw;
+    opacity: 0.77;
+    transform: rotate(-3deg);
+}
+#glyph5 {
+    width: 9.2vw;
+    color: black;
+    top: 11.5vw;
+    left: 72.05vw;
+    opacity: 0.77;
+    transform: rotate(-3deg);
+}
+
+#numbers_field {
+    padding: 1vw;
+    font-size: 2vw;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 255, 0);
+    border-style: none;
+    outline: none;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 100;
+    opacity: 0.1;
+}

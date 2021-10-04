@@ -1,0 +1,31 @@
+class Button {
+    constructor(){
+        this.keepInputInFocus();
+        this.bindEnterToSubmit();
+    }
+    keepInputInFocus(){
+        setInterval(function(){
+            $("#numbers_field").focus();
+        }, 400);
+    }
+    bindEnterToSubmit(){
+        $(window).keyup((e) => {
+            var key = e.which || e.keyCode;
+            if (key == 13){ //Enter or return key
+                this.validateInput();
+            }
+        });
+    }
+    validateInput(){
+        if ($("#numbers_field").val() == "4 8 15 16 23 42" && timer.duration_milliseconds < 240000 && timer.duration_milliseconds >= 0){
+            setTimeout(function(){
+                timer.resetTimer();
+            }, 1000);
+            $("#numbers_field").val("");
+        } else {
+            $("#numbers_field").val("");
+        }
+    }
+}
+
+var button = new Button();
