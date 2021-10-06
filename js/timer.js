@@ -16,6 +16,11 @@ class Timer {
             if (this.duration_milliseconds >= 1){
                 this.duration_milliseconds = this.duration_milliseconds - 1000;
                 var current_mins_and_secs = this.convertMillisecondsToMins(this.duration_milliseconds);
+                if (timer.duration_milliseconds < 240000){
+                    sounds.playTick();
+                } else if (timer.duration_milliseconds > 240000 && current_mins_and_secs[4] == "0" && current_mins_and_secs[5] == "0"){
+                    sounds.playTick();
+                }
                 if (this.duration_milliseconds <= this.four_mins_milliseconds){
                     this.updateTimer(current_mins_and_secs, true);
                 } else {
@@ -55,6 +60,7 @@ class Timer {
         this.duration_minutes = 109;
         this.duration_milliseconds = this.duration_minutes * this.milli_to_min_multiplier;
         sounds.stopAllSounds();
+        sounds.tick = false;
         sounds.playResetSound();
         this.reset_interval = setInterval(() => {
             $(".numbers").each(function(){
@@ -68,6 +74,7 @@ class Timer {
             $("#number1").text("1");
             $("#number3").text("8");
             $("#number2, #number4, #number5").text("0");
+            sounds.tick = true;
         }, 1500);
     }
 }

@@ -20,7 +20,7 @@ class Button {
         if ($("#numbers_field").val() == "4 8 15 16 23 42" && timer.duration_milliseconds < 240000 && timer.duration_milliseconds >= 0){
             setTimeout(function(){
                 timer.resetTimer();
-            }, 1000);
+            }, 3000);
             $("#numbers_field").val("");
         } else {
             $("#numbers_field").val("");

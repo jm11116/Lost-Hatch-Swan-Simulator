@@ -1,5 +1,6 @@
 class Sounds {
     constructor(){
+        this.tick = true;
         this.sound_check_interval;
         this.sound_interval;
         this.current_sound = "none";
@@ -15,6 +16,12 @@ class Sounds {
     soundCheck(){
         if (timer.duration_milliseconds < 240000 && this.current_sound != "beep"){
             this.playBeeps();
+        }
+    }
+    playTick(){
+        if (this.tick === true){
+            var tick = new Audio("assets/tick.mp3");
+            tick.play();
         }
     }
     playBeeps(){
