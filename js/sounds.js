@@ -12,7 +12,7 @@ class Sounds {
     }
     createSoundObjects(){
         this.tick_sfx = new Audio("assets/tick.mp3");
-        this.beep_sfx = new Audio("assets/beep.mp3")
+        this.beep_sfx = new Audio("assets/beep.mp3");
         this.reset_sfx = new Audio("assets/reset.mp3");
     }
     stopAllSounds(){
