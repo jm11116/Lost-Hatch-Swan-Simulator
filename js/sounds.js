@@ -1,10 +1,14 @@
 class Sounds {
     constructor(){
+        this.createSoundObjects();
         this.tick = true;
         this.sound_check_interval;
         this.sound_interval;
         this.current_sound = "none";
         this.soundCheck();
+    }
+    createSoundObjects(){
+        this.tick_sfx = new Audio("assets/tick.mp3");
     }
     stopAllSounds(){
         clearInterval(this.sound_interval);
@@ -20,8 +24,7 @@ class Sounds {
     }
     playTick(){
         if (this.tick === true){
-            var tick = new Audio("assets/tick.mp3");
-            tick.play();
+            this.tick_sfx.play();
         }
     }
     playBeeps(){
