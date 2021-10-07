@@ -1,5 +1,6 @@
 class Sounds {
     constructor(){
+        this.tick_sfx;
         this.createSoundObjects();
         this.tick = true;
         this.sound_check_interval;
