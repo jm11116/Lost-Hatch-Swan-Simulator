@@ -1,15 +1,18 @@
 class Sounds {
     constructor(){
-        this.tick_sfx;
-        this.createSoundObjects();
+        this.current_sound = "none";
         this.tick = true;
+        this.tick_sfx;
+        this.beep_sfx;
+        this.reset_sfx;
         this.sound_check_interval;
         this.sound_interval;
-        this.current_sound = "none";
+        this.createSoundObjects();
         this.soundCheck();
     }
     createSoundObjects(){
         this.tick_sfx = new Audio("assets/tick.mp3");
+        this.reset_sfx = new Audio("assets/reset.mp3");
     }
     stopAllSounds(){
         clearInterval(this.sound_interval);
@@ -30,16 +33,14 @@ class Sounds {
     }
     playBeeps(){
         this.current_sound = "beep";
-        var beep = new Audio("assets/beep.mp3");
-        beep.play(); 
+        this.beep_sfx.play(); 
         this.sound_interval = setInterval(() => {
-            beep.play(); 
+            this.beep_sfx.play(); 
         }, 3000);
     }
     playResetSound(){
         this.current_sound = "reset";
-        var reset = new Audio("assets/reset.mp3");   
-        reset.play();
+        this.reset_sfx.play();
     }
 }
 
