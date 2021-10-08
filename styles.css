@@ -5,6 +5,28 @@
 body {
     background-color: rgb(18, 18, 18);
 }
+#intro_overlay {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url("assets/computer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 97;
+}
+#blinking_caret {
+    width: 0.45vw;
+    height: 1.6vh;
+    margin-top: -20.7vw;
+    margin-left: -30.9vw;
+    background-color: rgb(43, 87, 43);
+    filter: blur(0.8px);
+    transform: rotate(-3deg);
+    position: absolute;
+    z-index: 98;
+}
 #power_surge_overlay {
     top: 0px;
     left: 0px;
@@ -66,7 +88,6 @@ body {
     position: absolute;
     z-index: 4;
     transform: rotate(-1.3deg);
-    filter: blur(0.2px);
     opacity: 0.8;
     transform: rotate(-1.1deg);
 }

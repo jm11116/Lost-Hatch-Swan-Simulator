@@ -3,17 +3,33 @@ class Sounds {
         this.current_sound = "none";
         this.tick = true;
         this.tick_sfx;
+        this.key_sfx;
         this.beep_sfx;
+        this.accept_sfx;
         this.reset_sfx;
         this.sound_check_interval;
         this.sound_interval;
         this.createSoundObjects();
+        this.playAmbience();
         this.soundCheck();
     }
     createSoundObjects(){
         this.tick_sfx = new Audio("assets/tick.mp3");
         this.beep_sfx = new Audio("assets/beep.mp3");
+        this.accept_sfx = new Audio("assets/accept.mp3");
         this.reset_sfx = new Audio("assets/reset.mp3");
+    }
+    playAmbience(){
+        this.ambience_sfx = new Audio("assets/ambience.mp3");
+        this.ambience_sfx.muted = true;
+        this.ambience_sfx.play();
+    }
+    playKeySound(){
+        var key_sfx = new Audio("assets/keyboard.mp3");
+        key_sfx.play();
+        setTimeout(function(){
+            key_sfx.remove();
+        }, 1000);
     }
     stopAllSounds(){
         clearInterval(this.sound_interval);
@@ -38,6 +54,9 @@ class Sounds {
         this.sound_interval = setInterval(() => {
             this.beep_sfx.play(); 
         }, 3000);
+    }
+    playAccept(){
+        this.accept_sfx.play();
     }
     playResetSound(){
         this.current_sound = "reset";
