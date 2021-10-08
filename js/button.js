@@ -12,6 +12,7 @@ class Button {
     bindKeySound(){
         $(window).keydown(() => {
             sounds.playKeySound();
+            sounds.playAmbience();
         });
     }
     bindEnterToSubmit(){

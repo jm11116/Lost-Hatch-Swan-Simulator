@@ -21,7 +21,6 @@ class Sounds {
     }
     playAmbience(){
         this.ambience_sfx = new Audio("assets/ambience.mp3");
-        this.ambience_sfx.muted = true;
         this.ambience_sfx.play();
     }
     playKeySound(){
