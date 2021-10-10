@@ -6,10 +6,11 @@ class Sequences {
             this.powerSurgeRoutine();
         }, 2000);
         timer.reset_interval = setInterval(() => {
-            $(".numbers").each(function(){
-                $(this).text(Math.floor(Math.random() * 9));
-            });
-        }, 100);
+            var random_minutes = Math.floor(Math.random() * 99999);
+            var random_seconds = Math.floor(Math.random() * 59);
+            var shuffled_time = random_minutes.toString() + ":" + random_seconds.toString();
+            timer.updateTimer(shuffled_time, true);
+        }, 110);
         setTimeout(() => {
             clearInterval(timer.reset_interval);
             timer.duration_mins = 109;
@@ -45,11 +46,11 @@ class Sequences {
         }, 5500);
     }
     makeGlyphsAppear(){
-        setTimeout(function(){$("#number1").hide(); $("#glyph1").show();}, 2500);
-        setTimeout(function(){$("#number2").hide(); $("#glyph2").show();}, 5000);
-        setTimeout(function(){$("#number3").hide(); $("#glyph3").show();}, 7500);
-        setTimeout(function(){$("#number4").hide(); $("#glyph4").show();}, 10000);
-        setTimeout(function(){$("#number5").hide(); $("#glyph5").show();}, 12500);
+        setTimeout(function(){$("#number1, #number1_b").hide(); $("#glyph1").show();}, 2500);
+        setTimeout(function(){$("#number2, #number2_b").hide(); $("#glyph2").show();}, 5000);
+        setTimeout(function(){$("#number3, #number3_b").hide(); $("#glyph3").show();}, 7500);
+        setTimeout(function(){$("#number4, #number4_b").hide(); $("#glyph4").show();}, 10000);
+        setTimeout(function(){$("#number5, #number5_b").hide(); $("#glyph5").show();}, 12500);
         setTimeout(function(){$("#container").fadeOut(3000);}, 14200);
     }
 }
