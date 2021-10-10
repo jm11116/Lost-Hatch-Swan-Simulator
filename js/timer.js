@@ -62,7 +62,7 @@ class Timer {
                 $("#number4_b").text(current_time.charAt(3));
                 $("#number5_b").text(current_time.charAt(4));
             }    
-        }, 90);
+        }, 100);
     }
     resetTimer(){
         clearInterval(this.ticker_interval);
