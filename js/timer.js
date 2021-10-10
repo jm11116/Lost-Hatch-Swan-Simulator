@@ -62,7 +62,7 @@ class Timer {
                 $("#number4_b").text(current_time.charAt(3));
                 $("#number5_b").text(current_time.charAt(4));
             }    
-        }, 80);
+        }, 90);
     }
     resetTimer(){
         clearInterval(this.ticker_interval);
@@ -76,7 +76,7 @@ class Timer {
             var random_seconds = Math.floor(Math.random() * 59);
             var shuffled_time = random_minutes.toString() + ":" + random_seconds.toString();
             this.updateTimer(shuffled_time, true);
-        }, 110);
+        }, 120);
         setTimeout(() => {
             clearInterval(this.reset_interval);
             this.duration_mins = 109;
