@@ -10,7 +10,7 @@ class Sequences {
             var random_seconds = Math.floor(Math.random() * 59);
             var shuffled_time = random_minutes.toString() + ":" + random_seconds.toString();
             timer.updateTimer(shuffled_time, true);
-        }, 120);
+        }, 115);
         setTimeout(() => {
             clearInterval(timer.reset_interval);
             timer.duration_mins = 109;
