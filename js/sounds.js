@@ -14,21 +14,18 @@ class Sounds {
         this.soundCheck();
     }
     createSoundObjects(){
+        this.key_sfx = new Audio("assets/keyboard.mp3");
         this.tick_sfx = new Audio("assets/tick.mp3");
         this.beep_sfx = new Audio("assets/beep.mp3");
         this.accept_sfx = new Audio("assets/accept.mp3");
         this.reset_sfx = new Audio("assets/reset.mp3");
     }
     playAmbience(){
-        this.ambience_sfx = new Audio("assets/ambience.mp3");
-        this.ambience_sfx.play();
+        //this.ambience_sfx = new Audio("assets/ambience.mp3");
+        //this.ambience_sfx.play();
     }
     playKeySound(){
-        var key_sfx = new Audio("assets/keyboard.mp3");
-        key_sfx.play();
-        setTimeout(function(){
-            key_sfx.remove();
-        }, 1000);
+        this.key_sfx.play();
     }
     stopAllSounds(){
         clearInterval(this.sound_interval);

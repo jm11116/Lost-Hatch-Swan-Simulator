@@ -54,6 +54,15 @@ class Timer {
             $("#number4").text(current_time.charAt(3));
             $("#number5").text(current_time.charAt(4));
         }
+        setTimeout(() => {
+            $("#number1_b").text(current_time.charAt(0));
+            $("#number2_b").text(current_time.charAt(1));
+            $("#number3_b").text(current_time.charAt(2));
+            if (update_seconds === true){
+                $("#number4_b").text(current_time.charAt(3));
+                $("#number5_b").text(current_time.charAt(4));
+            }    
+        }, 80);
     }
     resetTimer(){
         clearInterval(this.ticker_interval);
@@ -64,6 +73,9 @@ class Timer {
         sounds.playResetSound();
         this.reset_interval = setInterval(() => {
             $(".numbers").each(function(){
+                $(this).text(Math.floor(Math.random() * 9));
+            });
+            $(".numbers_bottom").each(function(){
                 $(this).text(Math.floor(Math.random() * 9));
             });
         }, 100);

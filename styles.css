@@ -15,6 +15,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 97;
+    display: none;
 }
 #blinking_caret {
     width: 0.45vw;
@@ -26,6 +27,7 @@ body {
     transform: rotate(-3deg);
     position: absolute;
     z-index: 98;
+    display: none;
 }
 #power_surge_overlay {
     top: 0px;
@@ -87,8 +89,28 @@ body {
     color: rgb(114, 249, 238);
     position: absolute;
     z-index: 4;
-    transform: rotate(-1.3deg);
     opacity: 0.8;
+    transform: rotate(-1.1deg);
+    height: 7.7vw;
+    overflow: hidden;
+}
+#top_overlay {
+    width: 100vw;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+.numbers_bottom {
+    font-family: arial-bold;
+    font-size: 10.5vw;
+    font-style: normal;
+    color: rgb(114, 249, 238);
+    position: absolute;
+    z-index: 2;
+    opacity: 0.95;
     transform: rotate(-1.1deg);
 }
 #number1 {
@@ -104,7 +126,7 @@ body {
 #number3 {
     top: 9.8vw;
     left: 50.6vw;
-    transform: rotate(-1.6deg);
+    transform: rotate(-1.65deg);
 }
 #number4 {
     color: black;
@@ -117,6 +139,35 @@ body {
     color: black;
     top: 8.85vw;
     left: 73.1vw;
+    opacity: 0.78;
+    transform: rotate(-3deg);
+}
+#number1_b {
+    top: 10.6vw;
+    left: 31.25vw;
+    opacity: 0.7;
+}
+#number2_b {
+    top: 10.2vw;
+    left: 40.8vw;
+    opacity: 0.74;
+}
+#number3_b {
+    top: 9.8vw;
+    left: 50.6vw;
+    transform: rotate(-1.65deg);
+}
+#number4_b {
+    color: black;
+    top: 9.3vw;
+    left: 63.3vw;
+    opacity: 0.77;
+    transform: rotate(-3deg);
+}
+#number5_b {
+    color: black;
+    top: 8.85vw;
+    left: 73.3vw;
     opacity: 0.78;
     transform: rotate(-3deg);
 }
