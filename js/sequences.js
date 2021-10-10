@@ -6,7 +6,7 @@ class Sequences {
             this.powerSurgeRoutine();
         }, 2000);
         timer.reset_interval = setInterval(() => {
-            var random_minutes = Math.floor(Math.random() * 99999);
+            var random_minutes = Math.floor(Math.random() * 999);
             var random_seconds = Math.floor(Math.random() * 59);
             var shuffled_time = random_minutes.toString() + ":" + random_seconds.toString();
             timer.updateTimer(shuffled_time, true);
