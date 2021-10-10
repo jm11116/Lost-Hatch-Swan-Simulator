@@ -72,13 +72,11 @@ class Timer {
         sounds.tick = false;
         sounds.playResetSound();
         this.reset_interval = setInterval(() => {
-            $(".numbers").each(function(){
-                $(this).text(Math.floor(Math.random() * 9));
-            });
-            $(".numbers_bottom").each(function(){
-                $(this).text(Math.floor(Math.random() * 9));
-            });
-        }, 100);
+            var random_minutes = Math.floor(Math.random() * 99999);
+            var random_seconds = Math.floor(Math.random() * 59);
+            var shuffled_time = random_minutes.toString() + ":" + random_seconds.toString();
+            this.updateTimer(shuffled_time, true);
+        }, 110);
         setTimeout(() => {
             clearInterval(this.reset_interval);
             this.duration_mins = 109;
@@ -86,6 +84,11 @@ class Timer {
             $("#number1").text("1");
             $("#number3").text("8");
             $("#number2, #number4, #number5").text("0");
+            setTimeout(function(){
+                $("#number1_b").text("1");
+                $("#number3_b").text("8");
+                $("#number2_b, #number4_b, #number5_b").text("0");
+            }, 80);
             sounds.tick = true;
         }, 1500);
     }
