@@ -5,7 +5,6 @@ class Sounds {
         this.tick_sfx;
         this.beep_sfx;
         this.klaxon_sfx;
-        this.klaxons = {};
         this.accept_sfx;
         this.reset_sfx;
         this.system_failure_sfx;
@@ -90,8 +89,9 @@ class Sounds {
         }, 1000);
     }
     playAccept(){
-        console.log("accept");
-        this.current_sound = "accept";
+        setTimeout(() => {
+            this.current_sound = "accept";
+        }, 1000);
         this.accept_sfx.play();
     }
     playResetSound(){
