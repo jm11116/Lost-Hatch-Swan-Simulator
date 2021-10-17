@@ -1,7 +1,7 @@
 class Sequences {
     systemFailure(){
         clearInterval(timer.ticker_interval);
-        sounds.stopAllSounds();
+        sounds.playSystemFailure();
         setTimeout(() => {
             this.powerSurgeRoutine();
         }, 2000);

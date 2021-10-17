@@ -28,7 +28,7 @@ class Cheats {
     }
     skipToSystemFailure(){
         clearInterval(timer.ticker_interval);
-        timer.duration_milliseconds = timer.duration_minutes = 10000;
+        timer.duration_milliseconds = timer.duration_minutes = 14000;
         timer.ticker();
     }
     speedUpSimulation(){
