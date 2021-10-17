@@ -27,7 +27,7 @@ class Sounds {
     }
     playAmbience(){
         this.ambience_sfx.play();
-        this.ambience_sfx.addEventListener("ended", function(){
+        this.ambience_sfx.addEventListener("ended", () => {
             this.ambience_sfx.currentTime = 0;
             this.ambience_sfx.play();
         });
