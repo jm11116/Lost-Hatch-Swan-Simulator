@@ -103,16 +103,6 @@ body {
     overflow: hidden;
     z-index: 3;
 }
-.numbers_bottom {
-    font-family: arial-bold;
-    font-size: 10.5vw;
-    font-style: normal;
-    color: rgb(114, 249, 238);
-    position: absolute;
-    z-index: 2;
-    opacity: 0.95;
-    transform: rotate(-1.1deg);
-}
 #number1 {
     top: 10.6vw;
     left: 31.2vw;
@@ -170,6 +160,17 @@ body {
     left: 73.3vw;
     opacity: 0.78;
     transform: rotate(-3deg);
+}
+.numbers_bottom {
+    font-family: arial-bold;
+    font-size: 10.5vw;
+    font-style: normal;
+    color: rgb(114, 249, 238);
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    transform: rotate(-1.8deg);
+    filter: contrast(80%);
 }
 
 .glyph {
