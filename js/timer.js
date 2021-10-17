@@ -32,6 +32,7 @@ class Timer {
                 }, 1000);
             }
             sounds.soundCheck();
+            console.log(sounds.current_sound);
         }, this.tick_speed);
     }
     convertMillisecondsToMins(milliseconds) {

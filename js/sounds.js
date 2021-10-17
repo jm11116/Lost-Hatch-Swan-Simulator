@@ -1,6 +1,6 @@
 class Sounds {
     constructor(){
-        this.current_sound = "none";
+        this.current_sound;
         this.tick = true;
         this.tick_sfx;
         this.beep_sfx;
@@ -38,18 +38,19 @@ class Sounds {
     }
     stopAllSounds(){
         clearInterval(this.sound_interval);
-        var sounds = document.getElementsByTagName("audio");
+        this.current_sound = null;
+        /*var sounds = document.getElementsByTagName("audio");
         for (var i = 0; i < sounds.length; i++){
             sounds[i].pause();
-        }
+        }*/
     }
     soundCheck(){
         console.log(timer.duration_milliseconds);
-        if (timer.duration_milliseconds < 240000 && timer.duration_milliseconds > 60000 && this.current_sound != "beep"){
+        if (timer.duration_milliseconds < 240000 && timer.duration_milliseconds > 60000 && this.current_sound != "beep" && this.current_sound != "accept"){
             this.playBeeps();
-        } else if (timer.duration_milliseconds < 60000 && timer.duration_milliseconds > 11000 && this.current_sound != "klaxon"){
+        } else if (timer.duration_milliseconds < 60000 && timer.duration_milliseconds > 11000 && this.current_sound != "klaxon" && this.current_sound != "accept"){
             this.playKlaxon();
-        } else if (timer.duration_milliseconds <= 11000 && timer.duration_milliseconds > 1000 && this.current_sound != "klaxon_fast"){
+        } else if (timer.duration_milliseconds <= 11000 && timer.duration_milliseconds > 1000 && this.current_sound != "klaxon_fast" && this.current_sound != "accept"){
             this.playKlaxonFast();
         } else if (timer.duration_milliseconds <= 1000 || timer.duration_milliseconds === 0) {
             this.current_sound = "system_failure";
@@ -82,13 +83,15 @@ class Sounds {
         clearInterval(this.sound_interval);
         this.current_sound = "klaxon_fast";
         this.sound_interval = setInterval(() => {
-            if (this.current_sound === "klaxon_fast" && this.current_sound != null){
+            if (this.current_sound === "klaxon_fast"){
                 this.klaxon_sfx.currentTime = 0;
                 this.klaxon_sfx.play();
             }
         }, 1000);
     }
     playAccept(){
+        console.log("accept");
+        this.current_sound = "accept";
         this.accept_sfx.play();
     }
     playResetSound(){
