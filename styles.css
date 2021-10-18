@@ -107,16 +107,20 @@ body {
     top: 10.6vw;
     left: 31.2vw;
     opacity: 0.7;
+    filter: brightness(90%);
+    transform: rotate(-1.65deg);
 }
 #number2 {
     top: 10.2vw;
     left: 40.8vw;
     opacity: 0.74;
+    filter: brightness(90%);
 }
 #number3 {
     top: 9.8vw;
     left: 50.6vw;
     transform: rotate(-1.65deg);
+    filter: brightness(90%);
 }
 #number4 {
     color: black;
@@ -136,11 +140,14 @@ body {
     top: 10.6vw;
     left: 31.25vw;
     opacity: 0.7;
+    filter: brightness(103%);
+    transform: rotate(-1.65deg);
 }
 #number2_b {
     top: 10.2vw;
     left: 40.8vw;
     opacity: 0.74;
+    filter: brightness(103%);
 }
 #number3_b {
     top: 9.8vw;

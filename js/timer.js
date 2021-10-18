@@ -1,6 +1,6 @@
 class Timer {
     constructor(){
-        this.tick_speed = 1000;
+        this.tick_speed = 1000; //Base everything off this to make simulation time scale proportionally
         this.ticker_interval;
         this.reset_interval;
         this.duration_minutes = 109;
@@ -32,7 +32,6 @@ class Timer {
                 }, 1000);
             }
             sounds.soundCheck();
-            console.log(sounds.current_sound);
         }, this.tick_speed);
     }
     convertMillisecondsToMins(milliseconds) {
