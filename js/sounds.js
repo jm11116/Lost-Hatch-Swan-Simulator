@@ -5,6 +5,7 @@ class Sounds {
         this.tick_sfx;
         this.beep_sfx;
         this.klaxon_sfx;
+        this.klaxon_sfx2;
         this.accept_sfx;
         this.reset_sfx;
         this.system_failure_sfx;
@@ -19,6 +20,7 @@ class Sounds {
         this.tick_sfx = new Audio("assets/tick.mp3");
         this.beep_sfx = new Audio("assets/beep.mp3");
         this.klaxon_sfx = new Audio("assets/klaxon.mp3");
+        this.klaxon_sfx2 = new Audio("assets/klaxon.mp3");
         this.accept_sfx = new Audio("assets/accept.mp3");
         this.reset_sfx = new Audio("assets/reset.mp3");
         this.system_failure_sfx = new Audio("assets/system_failure.mp3");
@@ -86,7 +88,13 @@ class Sounds {
                 this.klaxon_sfx.currentTime = 0;
                 this.klaxon_sfx.play();
             }
-        }, 1000);
+            setTimeout(() => {
+                if (this.current_sound === "klaxon_fast"){
+                    this.klaxon_sfx2.currentTime = 0;
+                    this.klaxon_sfx2.play();
+                }
+            }, 1000);
+        }, 2000);
     }
     playAccept(){
         setTimeout(() => {
